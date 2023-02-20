@@ -1,0 +1,18 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+      <beans>
+        	<bean id="java" class="com.ex.Book">
+        	<property name="bkid" value= "101"></property>
+        	<property name="book_name" value= "OCJP"></property>
+        	<property name="book_price" value= "532"></property>
+        	<property name="book_author" value= "Alice"></property>
+        	
+        	</bean>
+        	
+        	<bean id="programming" class="com.ex.Category" autowire="byType">
+        	<property name="category_name" value= "certification"></property>
+        	
+        	
+        	</bean>
+       </beans>
+       

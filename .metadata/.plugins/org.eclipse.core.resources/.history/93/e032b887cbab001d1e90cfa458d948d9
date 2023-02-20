@@ -1,0 +1,36 @@
+package com.ex;
+
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+@Service
+@Repository
+public class CollegeDao extends JdbcDaoSupport{
+	
+	@Autowired
+	DataSource dataSource;
+	
+	@PostConstruct
+	private void intialize() {
+		setDataSource(dataSource);
+	}
+	
+	
+		JdbcTemplate jt=getJdbcTemplate();
+		public void insert(College c) {
+	jt.execute("insert into college values("+c.getId()+",'"+c.getSname()+"','"+c.getSmarks()+"','"+c.getSection()+"','"+c.getBranch()+"')");
+	
+	}
+	public void select(){
+		List li=jt.queryForList("select * from college");
+		
+		}
+}

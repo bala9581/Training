@@ -1,0 +1,17 @@
+package com.ex;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+public class SpringUtil {
+	@Bean
+	public DataSource getDataSource() {
+		DriverManagerDataSource ds=new DriverMangerDataSource();
+		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		ds.setUrl("jdbc:mysql://Localhost:3306/class");
+	}
+}

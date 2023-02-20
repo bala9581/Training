@@ -1,0 +1,15 @@
+package com.ex;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class InfosysService {
+
+	@Autowired
+	InfosysRepository ir;
+	
+	public void insert(Infosys s) {
+		ir.save(s);
+	}
+}

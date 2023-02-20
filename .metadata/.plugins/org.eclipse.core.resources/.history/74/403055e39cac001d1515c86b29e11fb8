@@ -1,0 +1,15 @@
+package com.ex;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CollegeService {
+
+	@Autowired
+	CollegeRepository cr;
+	
+	public void insert(College c) {
+		cr.save(c);
+	}
+}

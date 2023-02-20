@@ -1,0 +1,10 @@
+package com.ex;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="infosys")
+public class Infosys {
+
+}

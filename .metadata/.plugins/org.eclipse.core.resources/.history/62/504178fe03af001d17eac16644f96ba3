@@ -1,0 +1,10 @@
+package com.ex;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface InfosysRepository extends JpaRepository<Infosys,Integer>{
+
+	
+}

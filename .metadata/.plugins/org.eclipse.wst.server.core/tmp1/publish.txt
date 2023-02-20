@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Wed Feb 15 10:10:34 CST 2023
+org.eclipse.jst.j2ee.server\:SpringBootExample=WEB-INF/lib/SpringBootExample-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\sbrt9\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\9.0.36\\tomcat-embed-websocket-9.0.36.jar=WEB-INF/lib/tomcat-embed-websocket-9.0.36.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\sbrt9\\.m2\\repository\\org\\springframework\\spring-web\\5.1.20.RELEASE\\spring-web-5.1.20.RELEASE.jar=WEB-INF/lib/spring-web-5.1.20.RELEASE.jar

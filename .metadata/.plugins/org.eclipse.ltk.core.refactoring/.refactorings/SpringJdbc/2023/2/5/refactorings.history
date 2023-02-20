@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;SpringUtil.java&apos; to &apos;SpringHibernate/src/main/java/com.ex&apos;&#x0D;&#x0A;- Original project: &apos;SpringJdbc&apos;&#x0D;&#x0A;- Destination element: &apos;SpringHibernate/src/main/java/com.ex&apos;&#x0D;&#x0A;- Original element: &apos;com.ex.SpringUtil.java&apos;" description="Copy compilation unit" destination="=SpringHibernate/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ex" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ex{SpringUtil.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1675494682616" units="1" version="1.0"/>
+</session>

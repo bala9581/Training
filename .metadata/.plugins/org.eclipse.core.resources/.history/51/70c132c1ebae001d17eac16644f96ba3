@@ -1,0 +1,18 @@
+package com.ex;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class InfosysController {
+	@Autowired
+	private InfosysController is;
+	
+	@RequestMapping(value="addInfosys",method=RequestMethod.POST)
+	public void addInfosys(@RequestBody Infosys s) {
+		
+	}
+}

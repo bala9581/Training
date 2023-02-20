@@ -1,0 +1,24 @@
+package com.ex;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class SpringBootEx {
+	public static void main(String[] args) {
+		ConfigurableApplicationContext ca=SpringApplication.run(SpringBootEx.class, args);
+		College c=new College();
+		c.setId(1070);
+		c.setSname("Rooba");
+		c.setSmarks(455);
+		c.setSection("B");
+		c.setBranch("ECE");
+	
+		CollegeDao d=ca.getBean(CollegeDao.class);
+		//d.insert(c);
+		//d.select();
+		d.update(c);
+		}
+
+}

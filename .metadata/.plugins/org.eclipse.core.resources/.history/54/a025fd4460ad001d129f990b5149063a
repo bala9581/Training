@@ -1,0 +1,26 @@
+package com.ex;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class SpringJpaEx {
+
+	public static void main(String[] args) {
+
+	ConfigurableApplicationContext ca=SpringApplication.run(SpringJpaEx.class,args);
+	CollegeService collegeService=ca.getBean(CollegeService.class);
+	College c=new College();
+	c.setId(1056);
+//	c.setSname("Rocky");
+//	c.setSmarks(345);
+//	c.setSection("A");
+//	c.setBranch("CSE");
+
+//collegeService.insert(c);
+	collegeService.delete(1038);
+	//collegeService.update(420,1040);
+//	collegeService.select();
+	}
+}

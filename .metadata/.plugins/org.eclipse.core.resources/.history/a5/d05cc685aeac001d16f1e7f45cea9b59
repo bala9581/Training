@@ -1,0 +1,58 @@
+package com.ex;
+
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+public class FrontController extends AbstractAnnotationConfigDispatcherServletInitializer{
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		// TODO Auto-generated method stub
+		return new Class[] {SpringUtil.class};
+	}
+	
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		// TODO Auto-generated method stub
+		return new String[] {"/"};
+	}
+
+}
+package com.ex;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class CollegeController {
+	
+	@Autowired
+	private SessionFactory sf;
+	private Session se;
+	private Transaction tx;
+	
+
+	@RequestMapping("/addcollege")
+	public String addCollege(HttpServletRequest request,HttpServletResponse response) {
+		int id =Integer.parseInt(request.getParameter("id"));
+		String sname=request.getParameter("sname");
+		int smarks=Integer.parseInt(request.getParameter("smarks"));
+		String section=request.getParameter("section");
+		String branch=request.getParameter("branch");
+		
+		College c =new College();
+		c.setId(id);
+		c.setSname(sname);
